@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <a href="http://www.itcast.cn" title="都挺好">都挺好</a>
+    <input type="checkbox" name="" id="">
+    <div index="1" date-index="2">我是div</div>
+    <span>123</span>
+    <script>
+        $(function () {
+            // 1.获取和设置元素固有属性
+            console.log($("a").prop("href"));
+            $("a").prop("title", "我们都挺好")
+            $("input").change(function () {
+                console.log($("input").prop("checked"));
+            })
+            // 2.获取和设置元素的自定义属性(我们自己手动定义的属性)
+            console.log($("div").attr("index"));
+            $("div").attr("index", 4);
+            // 3.数据缓存 date() 这个里面的数据是存放在元素的内存里面
+            $("span").date("uname", "andy");
+            console.log($("span").date("uname"));
+            // 4.这个方法获取date-index h5自定义属性 第一个不用写date- 而且返回的是数字型
+            console.log($("div").date("index"));
+        })
+
+
+    </script>
+</body>
+
+</html>

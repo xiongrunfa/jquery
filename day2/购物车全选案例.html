@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>全选 <input type="checkbox" name="" id="" class="checkall"></li>
+        <li><input type="checkbox" name="" id="" class="checkbox"></li>
+        <li><input type="checkbox" name="" id="" class="checkbox"></li>
+        <li><input type="checkbox" name="" id="" class="checkbox"></li>
+        <li>全选 <input type="checkbox" name="" id="" class="checkall"></li>
+    </ul>
+    <script>
+        $(".checkall").change(function () {
+            $(".checkbox, .checkall").prop("checked", $(this).prop("checked"))
+        })
+        $(".checkbox").change(function () {
+            if ($(".checkbox:checked").length === $(".checkbox").length) {
+                $(".checkall").prop("checked", true)
+            } else {
+                $(".checkall").prop("checked", false)
+            }
+        })
+    </script>
+</body>
+
+</html>

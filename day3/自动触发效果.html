@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+    </style>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <input type="text">
+    <script>
+        $("div").on("click", function () {
+            alert(11)
+        })
+        // 自动触发
+        // 第一种
+        // $("div").click();
+        // 第二种
+        // $("div").trigger("click");
+        // 第三种 triggerHandler() 不会触发元素的默认效果
+        $("div").triggerHandler("click");
+        $("input").on("focus", function () {
+            $(this).val("你好啊")
+        })
+        // $("input").triggerHandler("focus")
+        $("input").trigger("focus")
+    </script>
+</body>
+
+</html>

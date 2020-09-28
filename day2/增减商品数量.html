@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-left: 10px;
+        }
+
+        span {
+            font-size: 25px;
+        }
+
+        .itxt {
+            width: 30px;
+        }
+    </style>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body onselectstart="return false">
+    <div class=""><span class="decrement">-</span><input type="text" name="" class="itxt" value="1"><span
+            class="increment">+</span>
+    </div>
+    <div class=""><span class="decrement">-</span><input type="text" name="" class="itxt" value="1"><span
+            class="increment">+</span>
+    </div>
+    <div class=""><span class="decrement">-</span><input type="text" name="" class="itxt" value="1"><span
+            class="increment">+</span>
+    </div>
+    <script>
+        $(function () {
+            $(".increment").click(function () {
+                var n = $(this).siblings(".itxt").val();
+                n++;
+                $(this).siblings(".itxt").val(n)
+            })
+            $(".decrement").click(function () {
+                var n = $(this).siblings(".itxt").val();
+                if (n == 1) {
+                    return false
+                }
+                n--;
+                $(this).siblings(".itxt").val(n)
+            })
+        })
+    </script>
+</body>
+
+</html>

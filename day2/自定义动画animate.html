@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+        }
+    </style>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <button>动起来</button>
+    <div class=""></div>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    left: 200,
+                    top: 200,
+                    opacity: .4,
+                    width: 200,
+                    height: 200,
+                }, 500)
+            })
+        })
+    </script>
+</body>
+
+</html>

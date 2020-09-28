@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <ol>
+        <span>我是span里的li</span>
+        <li><span>我是span里的li</span></li>
+        <li>我是ol里的li</li>
+        <li class="current">我是ol里的li</li>
+        <li>我是ol里的li</li>
+    </ol>
+    <ul>
+        <li>我是ul里的li</li>
+        <li>我是ul里的li</li>
+        <li>我是ul里的li</li>
+        <li>我是ul里的li</li>
+    </ul>
+    <script>
+        $(function () {
+            // 选择子元素 相当于 ol>span
+            $('ol').children('span').css('background', 'green')
+            // 选择后代元素
+            $('ol').find('span').css('color', 'red')
+            // 选择兄弟元素
+            // $('ol .current').siblings('li').css('color', 'blue')
+            $('ol .current').prevAll('li').css('color', 'blue')
+            // 通过选择索引的方法
+            $('ul li').eq(2).css('color', 'pink')
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <div class=""></div>
+    <script>
+        $(function () {
+            // 不写属性值，则是返回属性值
+            console.log($('div').css('width'));
+            // 设置多组属性，参数用对象的形式
+            $('div').css({
+                // 属性名和数字可以不用加引号
+                width: 200,
+                height: 200,
+                backgroundColor: 'red'  // 不是数字的属性值一定要加引号
+            })
+        })
+    </script>
+</body>
+
+</html>

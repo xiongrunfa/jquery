@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px;
+        }
+
+        .son {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        $(function () {
+            //  1. 获取设置距离文档的位置 offset
+            console.log($(".son").offset());
+            /*  $(".son").offset({
+                 top: 200,
+                 left: 200
+             }) */
+            console.log($(".son").offset().top);
+            // 获取 距离带有定位的父级盒子的位置 position  如果没有带有定位的父级,则以文档为主
+            // 这个方法只能获取不能设置
+            console.log($(".son").position());
+
+        })
+    </script>
+</body>
+
+</html>

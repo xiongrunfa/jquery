@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .current {
+            background-color: greenyellow;
+        }
+    </style>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>码代码正是太快乐了</li>
+        <li>码代码正是太快乐了</li>
+        <li>码代码正是太快乐了</li>
+        <li>码代码正是太快乐了</li>
+    </ul>
+    <ol></ol>
+    <script>
+        $(function () {
+            // 事件处理on的优势
+            // 1.可以同时绑定多个事件
+            /* $("div").on({
+                mouseenter: function () {
+                    $(this).css("background", "green");
+                },
+                click: function () {
+                    $(this).css("background", "red");
+                },
+                mouseleave: function () {
+                    $(this).css("background", "blue");
+                }
+            }) */
+            $("div").on("mouseenter mouseleave", function () {
+                $(this).toggleClass("current")
+            })
+            // 2.可以实现事件委托
+            $("ul").on("click", "li", function () {
+                alert(11);
+            })
+            // 3.可以给未来添加的元素绑定事件
+            $("ol").on("click", "li", function () {
+                alert(11)
+            });
+            var li = $("<li>我是后来添加的li</li>");
+            $("ol").append(li);
+
+        })
+    </script>
+</body>
+
+</html>

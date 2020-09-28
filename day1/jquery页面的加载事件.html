@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // 第一种加载方式
+        // 页面中所有的内容加载完才会触发，标签，图片，文字内容。。。。
+        $(window).load(function () {
+            console.log('你好呀');
+        })
+        $(window).load(function () {
+            console.log('你好呀');
+        })
+        // 第二种加载方式
+        // 页面中基本的标签加载完毕后就可以触发了
+        /* $(document).ready(function () {
+            console.log('码代码真快乐啊');
+        }) */
+        /* jQuery(function () {
+            console.log('码代码真快乐啊');
+        }) */
+        $(function () {
+            console.log('码代码真快乐啊');
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        window.onload = function () {
+            // var btnobj = document.getElementById('btn');
+            /*  btnobj.onclick = function () {
+                 this.style.backgroundColor = 'red';
+             } */
+            // DOM对象转jquery对象----- $(DOM对象)
+            /*   $(btnobj).click(function () {
+                  $(this).css('backgroundColor', 'red')
+              }) */
+            // jquery对象转DOM对象
+            /* 1.$('#btn').get(0)
+                2.$('#btn')[0]
+             */
+        }
+        $(function () {
+            /*  $('#btn').get(0).onclick = function () {
+                 this.style.backgroundColor = 'red';
+             } */
+            $('#btn')[0].onclick = function () {
+                this.style.backgroundColor = 'red';
+            }
+        })
+        // jquery中获取元素的方式：通过各种选择器获取
+        /*
+        1.$('#id选择器名字')
+        2.$('.类样式名字')
+        3.$('标签名字')*/
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn">
+</body>
+
+</html>

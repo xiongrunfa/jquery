@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <span></span>
+    <script>
+        $(function () {
+            function $(ele) {
+                return document.querySelector(ele)
+            }
+            console.log($("div"));
+            // 1.如果$符号冲突 我们就使用 jQuery
+            jQuery.each();
+            // 2.让jQuery 释放对$的控制权 让用户自己决定
+            var suibian = jQuery.noConflict();
+            console.log(suibian("span"));
+            suibain.each();
+        })
+    </script>
+</body>
+
+</html>

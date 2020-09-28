@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>我是原先的li</li>
+    </ul>
+    <div class="box">我是原先的div</div>
+    <script>
+        // 创建元素
+        var li = $("<li>我是后来的li</li>");
+        // 内部添加
+        // $("ul").append(li);  //添加在内部子元素的后面
+        $("ul").prepend(li);
+        // 外部添加
+        var div = $("<div>我是后来的div</div>");
+        $(".box").after(div);
+        // 删除
+        // $("ul").remove();   //删除匹配的元素
+        // $("ul").empty();  //删除匹配元素内的所有子节点 
+        $("ul").html("");     //删除匹配元素内的所有子节点 
+    </script>
+</body>
+
+</html>

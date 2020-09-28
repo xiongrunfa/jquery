@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            padding: 18px;
+            border: 10px solid blueviolet;
+            margin: 15px;
+            background-color: bisque;
+        }
+    </style>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <div class=""></div>
+    <script>
+        $(function () {
+            // 1.width() / height() 获取设置元素 width和height大小
+            console.log($("div").width());
+            // $("div").width(300)
+
+            // 2.innerwidth() / innerheight()  获取设置元素 width和height + padding 大小
+            console.log($("div").innerWidth());
+
+            //  3.outerwidth() / outerheight() 获取设置元素 width和height + padding + border大小
+            console.log($("div").outerWidth());
+
+            // 4.outerwidth(true) / outerheight(true) 获取设置元素 width和height + padding + border + margin大小
+            console.log($("div").outerWidth(true));
+        })
+    </script>
+</body>
+
+</html>

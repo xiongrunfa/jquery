@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery1.12.4.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>码码码码</li>
+        <li>码码码码</li>
+        <li>码码码码</li>
+    </ul>
+    <script>
+        $("div").on({
+            mouseover: function () {
+                console.log("我经过了");
+            },
+            click: function () {
+                console.log("我点击了");
+            }
+        })
+        // $("div").off();  //解绑div上的所有事件
+        $("div").off("click");  //直解绑div上的点击事件
+        $("ul").on("click", "li", function () {
+            alert(11)
+        })
+        $("ul").off("click", "li");  //解绑事件委托
+        // one()  绑定一次性事件 触发一次后自动解绑
+        $("ul li:first").one("click", function () {
+            alert(11)
+        })
+    </script>
+</body>
+
+</html>

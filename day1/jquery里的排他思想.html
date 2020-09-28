@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <script>
+        $(function () {
+            $('button').click(function () {
+                // 设置当前元素的样式
+                $(this).css('background', 'red');
+                //  清楚其他元素的样式
+                $(this).siblings('button').css('background', '');
+            })
+        })
+    </script>
+</body>
+
+</html>

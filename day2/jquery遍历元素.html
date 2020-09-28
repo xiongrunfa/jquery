@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+    <script>
+        var arr = ["red", "green", "blue"];
+        var sum = 0;
+        // 回调函数第一个参数一定是索引号  第二个参数一定是DOM元素对象
+        $("div").each(function (i, domele) {
+            $(domele).css("color", arr[i]);
+            sum += parseInt($(domele).text());
+        })
+        console.log(sum);
+        // 第二种遍历方法 $.each(object,function(i,ele) {}) 适合处理数据 如数组、对象等
+        $.each($("div"), function (i, ele) {
+            console.log(i);
+        })
+        $.each({
+            name: "andy",
+            age: 18
+        }, function (i, ele) {
+            console.log(i);
+            console.log(ele);
+        })
+    </script>
+</body>
+
+</html>

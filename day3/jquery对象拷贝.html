@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery1.12.4.js"></script>
+</head>
+
+<body>
+    <script>
+        var targetObj = {
+            id: 0,
+            sex: "男",
+            msg: {
+                text: 1
+            }
+        };
+        var obj = {
+            id: 1,
+            name: "andy",
+            msg: {
+                age: 18
+            }
+        }
+        // $.extend(targetObj, obj);
+        // console.log(targetObj);  // 会覆盖targetObj 里面冲突的数据
+        // 1.浅拷贝把原来对象里面的复杂类型的地址拷贝给目标对象
+        // targetObj.msg.age = 20;
+        // console.log(targetObj);
+        // console.log(obj);
+        // 2.深拷贝把里面的数据完全复制一份给目标对象 里面有不冲突的属性会合并到一起
+        $.extend(true, targetObj, obj);
+        targetObj.msg.age = 20;
+        console.log(targetObj);
+        console.log(obj);
+    </script>
+</body>
+
+</html>
